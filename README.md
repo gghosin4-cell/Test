@@ -1,6 +1,6 @@
 # Soli Panel — Standalone Subscription Manager
 
-پنل مستقل مدیریت کاربران و Subscription، بدون وابستگی به Marzban.
+پنل مستقل مدیریت کاربران و Subscription، بدون وابستگی .
 
 ## اجرا
 ```bash
