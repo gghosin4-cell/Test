@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#020510">
+<title>Soli Panel Ultra Pro</title>
+<style>
+*{box-sizing:border-box}html{background:#02040b;scroll-behavior:smooth}body{margin:0;color:#f8fbff;background:#02040b;font-family:Tahoma,"Segoe UI",sans-serif;overflow-x:hidden;-webkit-tap-highlight-color:transparent}button,input{font:inherit}a{color:inherit}
+body:before,body:after{content:"";position:fixed;inset:-30%;pointer-events:none;z-index:-5}.orb{position:fixed;border-radius:50%;filter:blur(70px);opacity:.35;pointer-events:none;z-index:-4}.o1{width:360px;height:360px;top:-120px;right:-120px;background:#006eff}.o2{width:330px;height:330px;top:35%;left:-150px;background:#ff00b7}.o3{width:350px;height:350px;bottom:-150px;right:5%;background:#00ffd0}.o4{width:250px;height:250px;bottom:20%;left:25%;background:#713cff}.stars{position:fixed;inset:0;z-index:-3;opacity:.45;background-image:radial-gradient(circle at 12% 20%,#fff 0 1px,transparent 1.5px),radial-gradient(circle at 80% 12%,#0cf 0 1px,transparent 1.5px),radial-gradient(circle at 60% 40%,#fff 0 1px,transparent 1.5px),radial-gradient(circle at 20% 70%,#f0f 0 1px,transparent 1.5px),radial-gradient(circle at 88% 78%,#0ff 0 1px,transparent 1.5px);background-size:180px 180px,230px 230px,280px 280px,310px 310px,250px 250px}
+.wrap{width:min(100%,980px);margin:auto;padding:12px 12px calc(105px + env(safe-area-inset-bottom));position:relative}.panel{position:relative;background:linear-gradient(145deg,rgba(7,12,27,.91),rgba(3,8,20,.72));border:1px solid rgba(88,126,255,.36);box-shadow:0 18px 50px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.07);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);overflow:hidden}.panel:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 35%,rgba(0,221,255,.045),transparent 62%)}
+.header{min-height:108px;border-radius:30px 30px 20px 20px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:12px}.brandrow{display:flex;align-items:center;gap:12px}.brandlogo{width:58px;height:58px;border-radius:19px;display:grid;place-items:center;font-size:31px;font-weight:1000;color:#fff;background:linear-gradient(135deg,#00d9ff 5%,#6f3cff 45%,#ff10b7 72%,#ffdf00);box-shadow:0 0 28px rgba(0,194,255,.35);position:relative}.brandlogo:after{content:"S";font-size:33px;text-shadow:0 0 18px #fff}.brandname{font-size:27px;font-weight:1000;line-height:1;background:linear-gradient(90deg,#fff,#83eaff,#ff69db,#fff);-webkit-background-clip:text;background-clip:text;color:transparent}.ultra{font-size:12px;color:#c86dff;margin-top:7px;font-weight:900}.greeting{text-align:right;display:flex;align-items:center;gap:12px}.avatar{width:67px;height:67px;border-radius:50%;border:2px solid #8d6cff;background:radial-gradient(circle at 50% 30%,#7b52ff,#080d1e 60%);display:grid;place-items:center;font-size:29px;box-shadow:0 0 25px rgba(121,82,255,.35)}.hello{font-size:12px;color:#82d9ff}.hello b{display:block;font-size:18px;color:#fff;margin-top:5px}.online{font-size:11px;color:#00ffad;margin-top:7px}.online i{display:inline-block;width:9px;height:9px;background:#00ffad;border-radius:50%;box-shadow:0 0 12px #00ffad;margin-left:5px}.hamb{font-size:30px;color:#9edbff;margin-right:3px}
+.hero{border-radius:34px;padding:18px;margin-bottom:12px;min-height:270px;background:linear-gradient(115deg,rgba(4,11,30,.96),rgba(4,9,24,.76));border:1px solid #086cff;box-shadow:0 0 0 1px rgba(255,0,211,.4) inset,0 0 28px rgba(0,131,255,.18),0 0 40px rgba(255,0,202,.08)}.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:16px;align-items:center;height:100%}.globe{height:220px;display:grid;place-items:center;position:relative}.globe:before{content:"";width:185px;height:185px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#178aff,#07142e 50%,#030817 70%);box-shadow:0 0 32px #008dff,0 0 80px rgba(255,0,207,.35);border:1px solid #37dfff}.globe:after{content:"";position:absolute;width:205px;height:70px;border:2px solid #a500ff;border-radius:50%;transform:rotate(-25deg);box-shadow:0 0 18px #00cfff}.planet{position:absolute;font-size:67px;z-index:1;text-shadow:0 0 18px #1bbcff}.service{text-align:right}.service-label{font-size:13px;color:#dbe8ff}.service-status{font-size:25px;font-weight:1000;color:#62ffbd;margin-top:7px;text-shadow:0 0 15px rgba(0,255,170,.4)}.service-note{font-size:11px;color:#b4c5dc;margin-top:8px}.metrics{display:grid;gap:8px}.metric{padding:12px 14px;border-radius:19px;background:rgba(2,7,18,.62);border:1px solid rgba(87,144,255,.32);min-height:65px}.metric .k{font-size:10px;color:#8bcaff}.metric .v{font-size:17px;font-weight:1000;margin-top:4px;direction:ltr;text-align:right}.metric .v small{font-size:12px}.config-ips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;direction:ltr}.config-ip{font-size:8px;color:#bfeeff;padding:3px 7px;border-radius:999px;border:1px solid rgba(0,214,255,.28);background:rgba(0,120,255,.08);white-space:nowrap}.dots{text-align:center;color:#6c67ff;font-size:20px;letter-spacing:5px;margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:12px}.stat{min-height:157px;border-radius:23px;padding:13px 11px;position:relative}.stat.cyan{border-color:#008fff;box-shadow:inset 0 0 22px rgba(0,158,255,.08),0 0 20px rgba(0,158,255,.07)}.stat.pink{border-color:#913cff;box-shadow:inset 0 0 22px rgba(188,0,255,.08),0 0 20px rgba(188,0,255,.07)}.stat.blue{border-color:#00a5ff}.stat.green{border-color:#00dba8}.stat-icon{width:44px;height:44px;border:2px solid #8e43ff;border-radius:50%;display:grid;place-items:center;font-size:20px;margin-bottom:9px}.stat.cyan .stat-icon{border-color:#08bfff}.stat.blue .stat-icon{border-color:#00b9ff}.stat.green .stat-icon{border-color:#00f0bc}.k{font-size:10px;color:#9cb3cc}.stat .v{font-size:17px;font-weight:1000;margin-top:5px}.muted{font-size:9px;color:#8fa8c2;margin-top:4px}.bar{height:7px;border-radius:99px;background:#171a39;margin-top:11px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#fff,#9e4bff,#00d8ff);box-shadow:0 0 10px #7d54ff}
+.section{border-radius:29px;padding:18px;margin-bottom:12px}.section-title{display:flex;align-items:center;gap:10px;margin-bottom:13px}.section-title .ico{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;color:#7feaff;border:1px solid #008dff;background:rgba(0,157,255,.08);font-size:20px}.section-title h2{font-size:20px;margin:0}.en{font-size:10px;color:#8195af;letter-spacing:1px;margin-right:auto;direction:ltr}.subcard{border:1px solid #0af;background:linear-gradient(135deg,rgba(0,107,255,.09),rgba(0,255,173,.06));box-shadow:inset 0 0 35px rgba(0,221,255,.04),0 0 30px rgba(0,221,255,.06);border-radius:27px;padding:17px}.suburl{width:100%;direction:ltr;text-align:left;color:#d8faff;background:rgba(0,0,0,.34);border:1px solid rgba(0,220,255,.45);border-radius:16px;padding:14px 13px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;line-height:1.5;overflow-wrap:anywhere;word-break:break-all;white-space:normal;box-shadow:inset 0 0 22px rgba(0,0,0,.35);user-select:all}.subactions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-top:10px}.btn{min-height:51px;border-radius:17px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff;font-weight:1000;font-size:11px;cursor:pointer;text-decoration:none;display:grid;place-items:center;padding:8px}.btn.copy{background:linear-gradient(100deg,#ff00bf,#6e38ff,#00d9ff);border:0}.btn.open{background:linear-gradient(100deg,#00e87e,#00bfff);color:#04101a;border:0}.btn.share{background:rgba(90,0,255,.15);border-color:#8c37ff}.subhint{font-size:10px;color:#9cb1c7;margin-top:12px}.subhint b{color:#d9e9ff}
+.apps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.app{min-width:0;text-decoration:none;text-align:center;border-radius:20px;padding:12px 7px;background:rgba(3,9,20,.74);border:1px solid rgba(0,172,255,.45);box-shadow:inset 0 0 24px rgba(0,145,255,.04);transition:.18s}.app:active{transform:scale(.97)}.app-icon{width:64px;height:64px;border-radius:18px;margin:0 auto 9px;overflow:hidden;display:grid;place-items:center;background:#071126;box-shadow:0 0 20px rgba(0,191,255,.14)}.app-icon img{width:100%;height:100%;object-fit:cover}.fallback{display:none;font-size:25px;font-weight:1000}.app b{font-size:10px;display:block}.direct{display:block;margin-top:7px;font-size:8px;color:#00ffad}.direct:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#00ffad;box-shadow:0 0 7px #00ffad;margin-left:4px}
+.guide{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.step{padding:14px;border-radius:18px;border:1px solid rgba(137,56,255,.55);background:rgba(8,5,27,.5)}.step b{font-size:11px}.num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:10px;background:linear-gradient(135deg,#ff00c8,#6542ff);margin-left:6px}.step p{font-size:9px;line-height:1.9;color:#95aac2;margin:8px 0 0}.support{display:flex;align-items:center;justify-content:space-between;gap:10px}.support h3{margin:0;font-size:15px}.support p{font-size:9px;line-height:1.8;color:#8da4bd;margin:5px 0}.tg{padding:12px 18px;border-radius:15px;text-decoration:none;background:linear-gradient(135deg,#0088cc,#00c9ff);font-weight:1000;font-size:10px}
+.bottom{position:fixed;z-index:100;left:50%;transform:translateX(-50%);bottom:8px;width:min(960px,calc(100% - 14px));padding:8px 10px calc(8px + env(safe-area-inset-bottom));border-radius:25px;background:rgba(3,6,16,.88);border:1px solid rgba(104,125,255,.35);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 14px 45px rgba(0,0,0,.6);display:grid;grid-template-columns:1fr 1fr 1.55fr 1fr 1fr;gap:5px}.nav{text-decoration:none;text-align:center;color:#a6b7ce;font-size:9px;padding:6px 2px;border-radius:17px}.nav i{display:block;font-style:normal;font-size:21px;margin-bottom:3px}.nav.active{color:#fff}.nav.center{display:grid;place-items:center;color:#fff;font-size:14px;font-weight:1000;background:linear-gradient(90deg,#ff00bd,#7040ff,#00bfff,#00e59c);box-shadow:0 0 25px rgba(112,64,255,.3)}
+.toast{position:fixed;left:50%;transform:translateX(-50%) translateY(20px);bottom:92px;background:#071222;color:#fff;border:1px solid #00d7ff;border-radius:14px;padding:11px 18px;font-size:11px;opacity:0;pointer-events:none;transition:.25s;z-index:200;box-shadow:0 0 25px rgba(0,214,255,.2)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* PERFORMANCE + CONFIG ACCORDION */
+
+/* Circular real Marzban traffic indicator */
+.usage-ring-card{display:flex;flex-direction:column;align-items:center;text-align:center;min-height:350px}
+.usage-head{width:100%;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.usage-ring-wrap{width:170px;height:170px;margin:12px auto 2px;display:grid;place-items:center}
+.usage-ring{width:170px;height:170px;overflow:visible;transform:rotate(-90deg)}
+.usage-ring-bg{fill:none;stroke:#1b2338;stroke-width:12}
+.usage-ring-progress{fill:none;stroke:url(#usageGradient);stroke-width:12;stroke-linecap:round;stroke-dasharray:364.424;stroke-dashoffset:364.424;transition:stroke-dashoffset .45s ease,stroke .25s ease;filter:drop-shadow(0 0 5px rgba(0,210,255,.35))}
+.usage-ring-text{fill:#fff;font-size:18px;font-weight:1000;transform:rotate(90deg);transform-origin:70px 70px}
+.usage-ring-card .usage-v{font-size:30px;margin-top:0}
+.usage-ring-card .usage-sub{font-size:11px}
+.usage-ring-card .refresh-note{margin-top:10px}
+.usage-safe .usage-ring-progress{stroke:#20e6a3}.usage-warn .usage-ring-progress{stroke:#ffbd45}.usage-danger .usage-ring-progress{stroke:#ff4f7a}
+@media(max-width:720px){.orb{filter:blur(38px);opacity:.24}.panel{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .orb{filter:none!important;opacity:.18!important}
+  .panel,.bottom,.qr-modal{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  .panel{box-shadow:0 8px 24px rgba(0,0,0,.28)}
+  .globe:before{box-shadow:0 0 20px #008dff}
+  .globe:after{box-shadow:0 0 10px #00cfff}
+}
+.config-list{display:grid;gap:10px;contain:content}
+.config-card{content-visibility:auto;contain:layout paint;contain-intrinsic-size:90px}
+.config-card.collapsed .config-value,.config-card.collapsed .config-actions{display:none}
+.config-card.collapsed .config-head{margin-bottom:0}
+.config-head{cursor:pointer;user-select:none}
+.config-toggle{border:0;width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:rgba(0,190,255,.1);border:1px solid rgba(0,200,255,.28);color:#9feaff;font-size:16px;font-weight:900;cursor:pointer;display:grid;place-items:center}
+.config-toggle .arrow{display:block;transition:transform .16s ease}
+.config-card.collapsed .config-toggle .arrow{transform:rotate(180deg)}
+.config-head-main{display:flex;align-items:center;gap:8px;min-width:0}
+.config-head-main .config-name{white-space:nowrap}
+.config-toolbar{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}.config-toolbar .config-all-btn{margin:0}.config-open-all{width:auto;min-height:40px;padding:0 14px;margin:0 0 10px;border:1px solid rgba(0,229,255,.35);border-radius:13px;background:rgba(0,180,255,.08);color:#bff6ff;font-weight:900;font-size:10px;cursor:pointer}
+.config-list{display:grid;gap:12px}.config-card{position:relative;padding:14px;border-radius:20px;background:rgba(2,10,22,.78);border:1px solid rgba(0,190,255,.42);box-shadow:inset 0 0 28px rgba(0,130,255,.05)}.config-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.config-name{font-weight:900;font-size:14px}.config-type{font-size:9px;color:#8eeaff;padding:5px 8px;border-radius:999px;background:rgba(0,180,255,.08);border:1px solid rgba(0,180,255,.22)}.config-value{direction:ltr;text-align:left;display:block;width:100%;box-sizing:border-box;padding:12px;border-radius:14px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.12);color:#dff9ff;font-size:10px;line-height:1.55;overflow-wrap:anywhere;word-break:break-word;user-select:text}.config-actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:9px}.config-btn{border:0;border-radius:13px;min-height:40px;color:#fff;font-weight:800;cursor:pointer;background:linear-gradient(90deg,#08e0b1,#08b9ff);box-shadow:0 0 18px rgba(0,200,255,.12)}.config-btn.alt{background:linear-gradient(90deg,#a21cff,#0d8cff)}.config-btn.v2{background:linear-gradient(90deg,#00b8ff,#1769ff)}.empty-config{padding:18px;text-align:center;color:#9eb0c8;border:1px dashed rgba(255,255,255,.16);border-radius:16px}.config-count{font-size:9px;color:#7fffd4;margin-right:auto}.config-all-btn{width:100%;min-height:46px;margin:0 0 12px;border:1px solid rgba(0,229,255,.45);border-radius:15px;background:linear-gradient(100deg,rgba(255,0,191,.9),rgba(91,46,255,.92),rgba(0,210,255,.9));color:#fff;font-weight:1000;font-size:12px;cursor:pointer;box-shadow:0 0 24px rgba(0,200,255,.12);transition:.18s}.config-all-btn:active{transform:scale(.98)}.config-all-btn.copied{background:linear-gradient(100deg,#00d084,#00bfff)}
+
+.live-usage{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:9px;margin-bottom:12px}.usage-main,.usage-mini{border-radius:22px;padding:14px;border:1px solid rgba(0,220,255,.28);background:linear-gradient(135deg,rgba(0,107,255,.12),rgba(0,255,173,.05));box-shadow:inset 0 0 28px rgba(0,180,255,.04)}.usage-main{position:relative;overflow:hidden}.usage-main:after{content:"";position:absolute;inset:auto -25px -45px auto;width:120px;height:120px;border-radius:50%;background:rgba(0,214,255,.08);filter:blur(5px)}.usage-k{font-size:10px;color:#91cfff}.usage-v{font-size:24px;font-weight:1000;margin-top:4px;direction:ltr;text-align:right}.usage-sub{font-size:9px;color:#91a9c1;margin-top:4px}.usage-main.usage-safe .usage-v,.usage-main.usage-safe .usage-percent{color:#65ffd1}.usage-main.usage-warn .usage-v,.usage-main.usage-warn .usage-percent{color:#ffd166}.usage-main.usage-danger .usage-v,.usage-main.usage-danger .usage-percent{color:#ff5d7a}.usage-percent{font-size:18px;font-weight:1000;color:#65ffd1;margin-top:6px;direction:ltr;text-align:right}.live-badge{display:inline-flex;align-items:center;gap:5px;font-size:8px;color:#7dffd8;border:1px solid rgba(0,255,180,.25);padding:4px 7px;border-radius:999px;background:rgba(0,255,170,.06)}.live-dot{width:6px;height:6px;border-radius:50%;background:#00ffad;box-shadow:0 0 10px #00ffad;animation:pulseLive 1.2s infinite}.refresh-note{font-size:8px;color:#7188a4;margin-top:6px}@keyframes pulseLive{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+.qr-modal{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(2,4,12,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.qr-modal.show{display:flex}.qr-box{width:min(94vw,360px);padding:20px;border-radius:25px;background:rgba(9,16,35,.98);border:1px solid rgba(0,213,255,.45);box-shadow:0 20px 70px rgba(0,0,0,.55);text-align:center;position:relative}.qr-close{position:absolute;left:14px;top:10px;width:32px;height:32px;border:0;border-radius:10px;background:rgba(255,255,255,.06);color:#9eb0cc;font-size:22px;cursor:pointer}.qr-title{font-size:15px;font-weight:1000;margin:0 0 5px}.qr-subtitle{font-size:9px;color:#8292ad;word-break:break-all;direction:ltr;max-height:36px;overflow:hidden}.qr-img-wrap{width:250px;height:250px;max-width:78vw;max-height:78vw;margin:15px auto 12px;padding:12px;border-radius:20px;background:#fff;display:grid;place-items:center;box-shadow:0 0 35px rgba(0,211,255,.16)}.qr-img-wrap img,.qr-img-wrap canvas{display:block;width:100%!important;height:100%!important}.qr-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.qr-action{min-height:42px;border:0;border-radius:12px;background:linear-gradient(100deg,#00d9ff,#7040ff);color:#fff;font-weight:900;font-size:10px;cursor:pointer}.qr-action.alt{background:#121d35;border:1px solid #24375d}.btn.qr{background:linear-gradient(100deg,#00d9ff,#7040ff);border:0}.config-btn.qr{background:linear-gradient(90deg,#ff00bd,#6f3cff)}
+@media(max-width:720px){.wrap{padding:8px 9px 105px}.header{min-height:88px;padding:13px;border-radius:24px}.brandlogo{width:48px;height:48px;border-radius:15px}.brandname{font-size:21px}.ultra{font-size:9px}.avatar{width:53px;height:53px}.hello b{font-size:14px}.hamb{font-size:24px}.hero{padding:13px;min-height:0}.hero-grid{grid-template-columns:1fr 1fr;gap:8px}.globe{height:190px}.globe:before{width:145px;height:145px}.globe:after{width:170px}.planet{font-size:52px}.service-status{font-size:19px}.metrics{gap:6px}.metric{padding:10px;min-height:58px}.metric .v{font-size:14px}.live-usage{grid-template-columns:1fr 1fr;gap:7px}.usage-main{grid-column:1/-1}.usage-v{font-size:18px}.usage-main,.usage-mini{padding:11px}.stats{gap:7px}.stat{min-height:135px;padding:10px 8px}.stat-icon{width:37px;height:37px;font-size:17px}.stat .v{font-size:14px}.section{padding:13px;border-radius:23px}.section-title h2{font-size:16px}.subcard{padding:12px;border-radius:21px}.suburl{font-size:10px;padding:11px}.btn{font-size:9px;min-height:45px}.apps{gap:6px}.app{padding:9px 4px}.app-icon{width:49px;height:49px;border-radius:14px}.app b{font-size:8px}.direct{font-size:7px}.config-actions{grid-template-columns:1fr 1fr}.config-btn.v2{grid-column:1/-1}.config-card{padding:11px}.config-value{font-size:9px}guide{grid-template-columns:1fr}.support{align-items:stretch}.tg{display:grid;place-items:center}.bottom{bottom:5px}.nav i{font-size:18px}}
+@media(max-width:430px){.qr-modal{backdrop-filter:none;-webkit-backdrop-filter:none}.greeting{gap:6px}.hello{display:none}.hero-grid{grid-template-columns:1fr 1.1fr}.globe{height:175px}.globe:before{width:128px;height:128px}.globe:after{width:150px}.planet{font-size:45px}.service-status{font-size:17px}.service-note{font-size:9px}.stats{grid-template-columns:repeat(2,1fr)}.stat{min-height:128px}.subactions{grid-template-columns:1fr 1fr}.btn.share{grid-column:1/-1}.apps{grid-template-columns:repeat(5,1fr)}.app-icon{width:45px;height:45px}.apps .app b{font-size:7px}.apps .direct{font-size:6.5px}en{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="orb o4"></div><div class="stars"></div>
+<div class="wrap">
+<header class="panel header">
+ <div class="brandrow"><div class="brandlogo"></div><div><div class="brandname">Soli Panel</div><div class="ultra">♛ Ultra Pro ♛</div></div></div>
+ <div class="greeting"><div><div class="hello">سلام</div><b>{{ user.username }}</b><div class="online"><i></i>آنلاین</div></div><div class="avatar">◈</div><div class="hamb">☰</div></div>
+</header>
+<section class="panel hero" id="serverStatus">
+ <div class="hero-grid">
+  <div class="globe"><div class="planet">🌐</div></div>
+  <div class="service"><div class="service-label">🟢 وضعیت سرویس</div><div class="service-status">{{ user.status.value }}</div><div class="service-note">وضعیت واقعی سرویس از Solipanel</div><div class="metrics" style="margin-top:12px"><div class="metric"><div class="k">⌁ آدرس IP کانفیگ</div><div id="configIp" class="v">در حال شناسایی…</div><div id="configIps" class="config-ips"></div></div><div class="metric"><div class="k">⌖ موقعیت سرور</div><div id="configLocation" class="v">در حال شناسایی…</div></div></div></div>
+ </div><div class="dots">• • •</div>
+</section>
+<section class="live-usage" id="liveUsage">
+ <div class="usage-main usage-ring-card">
+  <div class="usage-head"><div class="usage-k">⚡ مصرف ترافیک</div><span class="live-badge"><i class="live-dot"></i> LIVE</span></div>
+  <div class="usage-ring-wrap">
+   <svg class="usage-ring" viewBox="0 0 140 140" aria-label="درصد مصرف ترافیک"><defs><linearGradient id="usageGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7b4dff"/><stop offset="55%" stop-color="#2d8cff"/><stop offset="100%" stop-color="#00d9ff"/></linearGradient></defs>
+    <circle class="usage-ring-bg" cx="70" cy="70" r="58"></circle>
+    <circle class="usage-ring-progress" id="usageRing" cx="70" cy="70" r="58"></circle>
+    <text class="usage-ring-text" id="usagePercent" x="70" y="70" text-anchor="middle" dominant-baseline="central">0٪</text>
+   </svg>
+  </div>
+  <div class="usage-v" id="usedTraffic">{{ user.used_traffic | bytesformat }}</div>
+  <div class="usage-sub" id="limitText">از {% if user.data_limit %}{{ user.data_limit | bytesformat }}{% else %}نامحدود{% endif %}</div>
+  <div class="refresh-note" id="usageRefreshNote">به‌روزرسانی واقعی از Marzban • هر ۵ ثانیه</div>
+ </div>
+ <div class="usage-mini"><div class="usage-k">📦 باقی‌مانده</div><div class="usage-v" id="remainingTraffic">—</div><div class="usage-sub">ترافیک قابل استفاده</div></div>
+ <div class="usage-mini"><div class="usage-k">◷ انقضا</div><div class="usage-v" style="font-size:15px" id="expireTop">{% if user.expire %}{{ user.expire | datetimeformat }}{% else %}نامحدود{% endif %}</div><div class="usage-sub">وضعیت اعتبار</div></div>
+ <div class="usage-mini"><div class="usage-k">⌁ وضعیت</div><div class="usage-v" style="font-size:15px;color:#65ffd1">{{ user.status.value }}</div><div class="usage-sub" id="refreshCountdown">آپدیت خودکار فعال</div></div>
+</section>
+
+{% if user.subscription_url %}
+<section class="panel section"><div class="section-title"><div class="ico">🔗</div><h2>لینک کامل اشتراک</h2><span class="en">SUBSCRIPTION</span></div>
+ <div class="subcard"><input id="suburl" class="suburl" type="text" readonly value="{{ user.subscription_url }}" onclick="this.select()">
+  <div class="subactions"><button class="btn copy" onclick="copySubscription()">کپی لینک 📋</button><button class="btn qr" onclick="showQr(fullUrl(),'QR لینک کامل اشتراک')">کد QR ▣</button><button class="btn open" onclick="openSubscription()">ورود مستقیم ↗</button><button class="btn share" onclick="shareSubscription()">اشتراک‌گذاری ⤴</button></div>
+  <div class="subhint">📍 لینک کامل و آماده استفاده در تمام برنامه‌ها &nbsp; • &nbsp; <b>Auto Update</b></div>
+ </div>
+</section>
+<section class="panel section"><div class="section-title"><div class="ico">⚡</div><h2>دسترسی سریع</h2><span class="en">QUICK ACCESS</span></div>
+ <div class="apps">
+  <a class="app" id="a-v" href="#"><div class="app-icon"><img src="https://play-lh.googleusercontent.com/x3RFim6Fb-bgRd-HnV9VNrdqBRueyOuUjvu7ZNv7eRYC5Idl3WU_GSxa7bpx5yyUT30" alt="v2rayNG"><span class="fallback">V</span></div><b>v2rayNG</b><span class="direct">اتصال مستقیم</span></a>
+  <a class="app" id="a-h" href="#"><div class="app-icon"><img src="https://github.com/leanflutter/flutter_apps/blob/main/source/apps/hiddify-next/hiddify-next-icon.png?raw=true" alt="Hiddify"><span class="fallback">H</span></div><b>Hiddify</b><span class="direct">اتصال مستقیم</span></a>
+  <a class="app" id="a-b" href="#"><div class="app-icon"><img src="https://play-lh.googleusercontent.com/kVeisXWkT4oRMDsZbFrY7XXJvnxHJ7PnQFE71XCcCWAoeOAg5G3HJRDp4Ro3Xbc3WA" alt="V2Box"><span class="fallback">V2</span></div><b>V2Box</b><span class="direct">اتصال مستقیم</span></a>
+  <a class="app" id="a-s" href="#"><div class="app-icon"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/83/a0/cd/83a0cd76-ef34-d890-7b44-a1a9a17041c5/AppIcon-0-0-1x_U007epad-0-0-0-0-85-220.png/512x512bb.jpg" alt="Streisand"><span class="fallback">S</span></div><b>Streisand</b><span class="direct">اتصال مستقیم</span></a>
+  <a class="app" id="a-r" href="#"><div class="app-icon"><img src="https://avatars.githubusercontent.com/u/22568082?s=200&v=4" alt="Shadowrocket"><span class="fallback">↗</span></div><b>Shadowrocket</b><span class="direct">اتصال مستقیم</span></a>
+ </div>
+</section>
+{% endif %}
+<section id="configs" class="panel section"><div class="section-title"><div class="ico">⚡</div><h2>کانفیگ‌ها</h2><span class="en">CONFIGS</span><span id="configCount" class="config-count">{{ user.links | length }} کانفیگ</span></div><div class="config-toolbar"><button type="button" id="copyAllConfigs" class="config-all-btn">📋 کپی همه کانفیگ‌ها</button><button type="button" id="toggleAllConfigs" class="config-open-all">▾ باز کردن همه</button></div><div id="configList" class="config-list">
+{% set ns = namespace(count=0) %}
+{% for link in user.links %}
+{% if link and link != 'False' and link != 'None' %}
+{% set ns.count = ns.count + 1 %}
+<div class="config-card collapsed"><div class="config-head" data-config-toggle><div class="config-head-main"><span class="config-name">کانفیگ {{ ns.count }}</span><span class="config-type" data-config-type>CONFIG</span></div><button type="button" class="config-toggle" aria-expanded="false"><span class="arrow">▾</span></button></div><div class="config-value" data-config-link>{{ link }}</div><div class="config-actions"><button type="button" class="config-btn" data-copy-config>کپی کانفیگ 📋</button><a class="config-btn alt" data-hiddify-config href="#">Hiddify ⚡</a><a class="config-btn v2" data-v2ray-config href="#">v2rayNG ↗</a><button type="button" class="config-btn qr" data-qr-config>QR ▣</button></div></div>
+{% endif %}
+{% endfor %}
+{% if ns.count == 0 %}<div class="empty-config">در حال دریافت کانفیگ‌ها…</div>{% endif %}
+</div></section>
+
+
+<section class="panel section"><div class="section-title"><div class="ico">☼</div><h2>راهنمای اتصال</h2><span class="en">GUIDE</span></div><div class="guide"><div class="step"><b><span class="num">01</span>انتخاب برنامه</b><p>یکی از برنامه‌های بالا را انتخاب کنید و روی اتصال مستقیم بزنید.</p></div><div class="step"><b><span class="num">02</span>افزودن اشتراک</b><p>اگر اتصال مستقیم نشد، لینک کامل اشتراک را کپی کنید.</p></div><div class="step"><b><span class="num">03</span>اتصال</b><p>پروفایل را فعال کنید و از اتصال پایدار استفاده کنید.</p></div></div></section>
+<section class="panel section support"><div><h3>♛ سریع‌تر • امن‌تر • بدون محدودیت</h3><p>با <b>Soli Panel</b> تجربه‌ای حرفه‌ای از مدیریت اشتراک خود داشته باشید.</p></div><a class="tg" href="https://t.me/Soliconf" target="_blank" rel="noopener">پشتیبانی @Soliconf</a></section>
+</div>
+<nav class="bottom"><a class="nav active" href="#"><i>⌂</i>خانه</a><a class="nav" href="#configs"><i>⚡</i>کانفیگ‌ها</a><div class="nav center">♛ Soli Panel</div><a class="nav" href="#service"><i>⚙</i>تنظیمات</a><a class="nav" href="https://t.me/Soliconf" target="_blank"><i>♧</i>پشتیبانی</a></nav>
+<div id="qrModal" class="qr-modal" onclick="closeQrModal(event)">
+  <div class="qr-box" onclick="event.stopPropagation()">
+    <button class="qr-close" type="button" onclick="closeQrModal()">×</button>
+    <div class="qr-title" id="qrTitle">QR لینک اشتراک</div>
+    <div class="qr-subtitle" id="qrText"></div>
+    <div class="qr-img-wrap" id="qrRender"></div>
+    <div class="qr-actions"><button class="qr-action" type="button" onclick="copyQrUrl()">📋 کپی لینک</button><button class="qr-action alt" type="button" onclick="closeQrModal()">بستن</button></div>
+  </div>
+</div>
+<div id="toast" class="toast">کپی شد ✓</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+let __qrCurrentUrl = '';
+function showQr(value,title){
+  const u=String(value||'').trim(); if(!u){toast('لینک QR موجود نیست');return;}
+  __qrCurrentUrl=u;
+  const modal=document.getElementById('qrModal'), render=document.getElementById('qrRender');
+  if(!modal||!render)return;
+  document.getElementById('qrTitle').textContent=title||'QR Code';
+  document.getElementById('qrText').textContent=u;
+  render.innerHTML='';
+  try{
+    if(typeof qrcode==='function'){
+      const qr=qrcode(0,'H'); qr.addData(u); qr.make();
+      render.innerHTML=qr.createImgTag(6,4);
+      const img=render.querySelector('img'); if(img){img.style.width='100%';img.style.height='100%';img.alt='QR Code';}
+    }else throw new Error('QR library unavailable');
+  }catch(e){
+    const img=document.createElement('img'); img.alt='QR Code';
+    img.src='https://api.qrserver.com/v1/create-qr-code/?size=500x500&data='+encodeURIComponent(u);
+    render.appendChild(img);
+  }
+  modal.classList.add('show');
+}
+function copyQrUrl(){if(__qrCurrentUrl)copyText(__qrCurrentUrl);}
+function closeQrModal(e){
+  if(!e || e.target===document.getElementById('qrModal') || e.target.classList.contains('qr-close')){
+    const m=document.getElementById('qrModal'); if(m)m.classList.remove('show');
+  }
+}
+
+function fullUrl(){const e=document.getElementById('suburl');if(!e)return '';let u=e.value.trim();if(location.pathname.startsWith('/sub/')){u=location.origin+location.pathname+location.search}else if(u.startsWith('/')){u=location.origin+u}else if(u.startsWith('//')){u=location.protocol+u}return u}
+function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');clearTimeout(window._toast);window._toast=setTimeout(()=>x.classList.remove('show'),1400)}
+async function copyText(v){v=String(v||'').trim();if(!v){toast('چیزی برای کپی نیست');return false}try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(v);toast('کپی شد ✓');return true}}catch(_){}try{const t=document.createElement('textarea');t.value=v;t.setAttribute('readonly','');t.style.position='fixed';t.style.top='0';t.style.left='-9999px';t.style.opacity='0';document.body.appendChild(t);t.focus();t.select();t.setSelectionRange(0,t.value.length);const ok=document.execCommand('copy');t.remove();if(ok){toast('کپی شد ✓');return true}}catch(_){}try{window.prompt('برای کپی، متن زیر را انتخاب کنید:',v)}catch(_){}toast('متن آماده کپی است');return false}
+function copySubscription(){const u=fullUrl();if(u){const e=document.getElementById('suburl');if(e)e.value=u;copyText(u)}}
+function getAllConfigs(){return [...document.querySelectorAll('#configList [data-config-link]')].map(e=>(e.textContent||'').trim()).filter(v=>v&&v!=='False'&&v!=='None')}
+async function copyAllConfigs(){const arr=getAllConfigs();if(!arr.length){toast('کانفیگی برای کپی وجود ندارد');return}const ok=await copyText(arr.join('\n'));const b=document.getElementById('copyAllConfigs');if(ok&&b){b.classList.add('copied');b.textContent='✓ همه کانفیگ‌ها کپی شد';setTimeout(()=>{b.classList.remove('copied');b.textContent='📋 کپی همه کانفیگ‌ها'},1600)}}
+document.getElementById('copyAllConfigs')?.addEventListener('click',copyAllConfigs);
+(function(){
+  const b=document.getElementById('toggleAllConfigs');
+  if(!b)return;
+  let open=false;
+  b.addEventListener('click',function(){
+    open=!open;
+    document.querySelectorAll('#configList .config-card').forEach(card=>{
+      card.classList.toggle('collapsed',!open);
+      const t=card.querySelector('.config-toggle');
+      if(t)t.setAttribute('aria-expanded',open?'true':'false');
+    });
+    b.textContent=open?'▴ بستن همه':'▾ باز کردن همه';
+  });
+})();
+
+function openSubscription(){const u=fullUrl();if(u)location.href=u}
+async function shareSubscription(){const u=fullUrl();if(!u)return;if(navigator.share){try{await navigator.share({title:'Soli Panel',text:'لینک اشتراک Soli Panel',url:u})}catch(_){}}else copyText(u)}
+/* لینک‌های مستقیم اپ‌ها — بدون interception جاوااسکریپتی */
+(function(){const e=document.getElementById('suburl');if(!e)return;const u=fullUrl();if(u)e.value=u;const q=encodeURIComponent(u);
+  const av=document.getElementById('a-v'),ah=document.getElementById('a-h'),ab=document.getElementById('a-b'),as=document.getElementById('a-s'),ar=document.getElementById('a-r');
+  if(av)av.href='v2rayng://install-sub?url='+q;
+  if(ah)ah.href='hiddify://import/'+u+'#Soli%20Panel';
+  if(ab)ab.href='v2box://install-sub?url='+q+'&name='+encodeURIComponent('Soli Panel');
+  if(as)as.href='streisand://import/'+q;
+  if(ar)ar.href='shadowrocket://add/'+q;
+})();
+
+/* اتصال مستقیم کانفیگ‌ها — با لینک واقعی <a> برای جلوگیری از بلاک شدن Deeplink توسط مرورگر */
+(function(){
+  const list=document.getElementById('configList');
+  const count=document.getElementById('configCount');
+  if(!list)return;
+
+  function clean(v){return String(v||'').trim();}
+  function schemeOf(u){return ((u.match(/^([a-zA-Z][a-zA-Z0-9+.-]*):\/\//)||[])[1]||'').toLowerCase();}
+  function setType(card,u){const el=card.querySelector('[data-config-type]');if(el)el.textContent=(schemeOf(u)||'CONFIG').toUpperCase();}
+  function wireCard(card,i){
+    const value=card.querySelector('[data-config-link]');
+    const u=clean(value&&value.textContent);
+    if(!u)return;
+    setType(card,u);
+    const head=card.querySelector('[data-config-toggle]');
+    const toggle=card.querySelector('.config-toggle');
+    function setOpen(open){
+      card.classList.toggle('collapsed',!open);
+      if(toggle)toggle.setAttribute('aria-expanded',open?'true':'false');
+    }
+    if(toggle && !toggle.dataset.wired){
+      toggle.dataset.wired='1';
+      toggle.addEventListener('click',function(ev){ev.stopPropagation();setOpen(card.classList.contains('collapsed'));});
+    }
+    if(head && !head.dataset.wired){
+      head.dataset.wired='1';
+      head.addEventListener('click',function(ev){if(ev.target.closest('a,button'))return;setOpen(card.classList.contains('collapsed'));});
+    }
+    const copy=card.querySelector('[data-copy-config]');
+    const hid=card.querySelector('[data-hiddify-config]');
+    const v2=card.querySelector('[data-v2ray-config]');
+    const qr=card.querySelector('[data-qr-config]');
+    if(copy){copy.onclick=function(){copyText(u);};}
+    if(qr){qr.onclick=function(){showQr(u,'QR کانفیگ '+(i+1));};}
+    if(hid){
+      const name='Soli Panel - Config '+(i+1);
+      /* Hiddify supports hiddify://import/<sublink>#name */
+      hid.href='hiddify://import/'+u+'#'+encodeURIComponent(name);
+      hid.target='_self';
+      hid.rel='noopener';
+    }
+    if(v2){
+      /* v2rayNG registers v2rayng://install-config */
+      v2.href='v2rayng://install-config?url='+encodeURIComponent(u);
+      v2.target='_self';
+      v2.rel='noopener';
+    }
+  }
+  function wireAll(){
+    const cards=[...list.querySelectorAll('.config-card')];
+    cards.forEach(wireCard);
+    if(count)count.textContent=cards.length+' کانفیگ';
+    return cards.length;
+  }
+
+  let n=wireAll();
+
+  /* اگر user.links در قالب خالی بود، endpoint رسمی /sub/<token>/links را هم امتحان کن. */
+  if(n===0){
+    const path=location.pathname.replace(/\/+$/,'');
+    const linksUrl=path.endsWith('/links')?path:path+'/links';
+    fetch(linksUrl,{credentials:'same-origin',cache:'no-store'})
+      .then(r=>r.ok?r.text():Promise.reject())
+      .then(txt=>{
+        let data=txt;
+        try{data=JSON.parse(txt);}catch(_){/* ممکن است متن خام لینک‌ها باشد */}
+        let arr=[];
+        if(Array.isArray(data))arr=data;
+        else if(data&&typeof data==='object'){
+          Object.keys(data).forEach(k=>{const v=data[k];if(Array.isArray(v))arr.push(...v);else if(typeof v==='string')arr.push(v);});
+        }else if(typeof data==='string'){
+          arr=data.split(/\r?\n/).map(clean).filter(Boolean);
+        }
+        arr=arr.filter(x=>typeof x==='string'&&x&&x!=='False'&&x!=='None');
+        if(!arr.length)return;
+        list.innerHTML=arr.map((u,i)=>'<div class="config-card collapsed"><div class="config-head" data-config-toggle><div class="config-head-main"><span class="config-name">کانفیگ '+(i+1)+'</span><span class="config-type" data-config-type>CONFIG</span></div><button type="button" class="config-toggle" aria-expanded="false"><span class="arrow">▾</span></button></div><div class="config-value" data-config-link></div><div class="config-actions"><button type="button" class="config-btn" data-copy-config>کپی کانفیگ 📋</button><a class="config-btn alt" data-hiddify-config href="#">Hiddify ⚡</a><a class="config-btn v2" data-v2ray-config href="#">v2rayNG ↗</a><button type="button" class="config-btn qr" data-qr-config>QR ▣</button></div></div>').join('');
+        [...list.querySelectorAll('.config-card')].forEach((card,i)=>{
+          card.querySelector('[data-config-link]').textContent=arr[i];
+          wireCard(card,i);
+        });
+        if(count)count.textContent=arr.length+' کانفیگ';
+      }).catch(()=>{});
+  }
+})();
+
+/* استخراج IP/هاست واقعی از کانفیگ‌های Marzban و نمایش موقعیت سرور */
+(async function(){
+  const ipEl=document.getElementById('configIp'), listEl=document.getElementById('configIps'), locEl=document.getElementById('configLocation');
+  if(!ipEl||!listEl||!locEl)return;
+  let raw=[...document.querySelectorAll('#configList [data-config-link]')].map(e=>(e.textContent||'').trim()).filter(Boolean);
+  const hosts=[];
+  function addHost(h){if(!h)return;h=String(h).trim().replace(/^\[|\]$/g,'');if(h&&!hosts.includes(h))hosts.push(h)}
+  for(const link of raw){
+    const list=link.split(/\r?\n|\s+/).filter(Boolean);
+    for(let x of list){
+      try{
+        if(/^vmess:\/\//i.test(x)){
+          const b=x.slice(8).split('#')[0].replace(/-/g,'+').replace(/_/g,'/');
+          const json=JSON.parse(decodeURIComponent(escape(atob(b.padEnd(b.length+(4-b.length%4))%4, '='))));
+          addHost(json.add);
+        }else if(/^[a-z][a-z0-9+.-]*:\/\//i.test(x)){ addHost(new URL(x).hostname); }
+        else { const m=x.match(/(?:@|host=|add=|address=)(?:\[)?([a-z0-9.-]+|(?:\d{1,3}\.){3}\d{1,3})(?:\])?/i); if(m)addHost(m[1]); }
+      }catch(e){
+        const m=x.match(/@(?:\[)?([^\]:?#]+|(?:\d{1,3}\.){3}\d{1,3})(?:\])?(?::\d+)?/); if(m)addHost(m[1]);
+      }
+    }
+  }
+  // اگر لینک‌ها در محیط مارزبان در دسترس نبودند، دامنه فعلی فقط به‌عنوان fallback استفاده می‌شود.
+  if(!hosts.length){
+    try{const su=fullUrl();if(su)addHost(new URL(su).hostname)}catch(e){}
+  }
+  const isIP=h=>/^((25[0-5]|2[0-4]\d|1?\d?\d)(\.(25[0-5]|2[0-4]\d|1?\d?\d)){3})$/.test(h);
+  const ips=[];
+  for(const h of hosts){
+    if(isIP(h)){ips.push(h);continue}
+    try{const r=await fetch('https://dns.google/resolve?name='+encodeURIComponent(h)+'&type=A',{cache:'no-store'});const j=await r.json();const a=(j.Answer||[]).map(x=>x.data).filter(isIP);for(const ip of a)if(!ips.includes(ip))ips.push(ip)}catch(e){}
+  }
+  if(ips.length){
+    ipEl.textContent=ips[0];
+    listEl.innerHTML=ips.map(ip=>'<span class="config-ip">'+ip+'</span>').join('');
+    if(ips.length>1) ipEl.title=ips.join(' • ');
+    try{
+      const r=await fetch('https://ipwho.is/'+encodeURIComponent(ips[0]),{cache:'no-store'});const g=await r.json();
+      if(g && g.success!==false){const city=[g.city,g.region].filter(Boolean).join('، ');const country=g.country||'';const flag=g.flag&&g.flag.emoji?g.flag.emoji:'';locEl.textContent=[city,country].filter(Boolean).join(' • ')+(flag?' '+flag:'');}
+      else locEl.textContent='موقعیت نامشخص';
+    }catch(e){locEl.textContent='موقعیت نامشخص';}
+  }else{ipEl.textContent='IP کانفیگ یافت نشد';locEl.textContent='موقعیت نامشخص'}
+})();
+const used=Number({{ user.used_traffic or 0 }})||0,limit=Number({{ user.data_limit or 0 }})||0;const pct=limit?Math.min(100,(used/limit)*100):0;const ring=document.getElementById('usageRing'),up=document.getElementById('usagePercent'),rem=document.getElementById('remainingTraffic'),um=document.querySelector('.usage-main');const ringLen=2*Math.PI*58;if(ring){ring.style.strokeDasharray=ringLen.toFixed(3);ring.style.strokeDashoffset=(ringLen-(ringLen*pct/100)).toFixed(3);}if(up)up.textContent=limit?(pct.toFixed(1)+'٪'):'∞';if(rem)rem.textContent=limit?bytesFmt(Math.max(0,limit-used)):'نامحدود';if(um){um.classList.remove('usage-safe','usage-warn','usage-danger');um.classList.add(!limit||pct<60?'usage-safe':pct<85?'usage-warn':'usage-danger');}function bytesFmt(n){n=Number(n)||0;if(n<1024)return n.toFixed(0)+' B';const u=['KB','MB','GB','TB','PB'];let i=-1;do{n/=1024;i++}while(n>=1024&&i<u.length-1);return n.toFixed(n>=100?0:n>=10?1:2)+' '+u[i]}(function(){let sec=5;const el=document.getElementById('refreshCountdown');const tick=()=>{if(el)el.textContent='به‌روزرسانی بعدی: '+sec+' ثانیه';if(--sec<0)location.reload()};tick();setInterval(tick,1000)})();
+</script>
+
+<script>
+window.PANEL_USER = user;
+</script>
+</body>
+</html>
